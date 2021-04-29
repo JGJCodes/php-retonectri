@@ -1,0 +1,15 @@
+Algoritmo teclado_movil
+	// Variables que almacena los datos de entrada
+	Definir mensaje Como Caracter
+	
+	// Recibir los datos de entrada
+	Escribir 'Ingresar el mensaje:'
+	Leer mensaje
+	
+	//Inicializar el teclado
+    Dimension key(); 
+    $char = ord('a');
+	$respuesta="";
+	
+	
+FinAlgoritmo

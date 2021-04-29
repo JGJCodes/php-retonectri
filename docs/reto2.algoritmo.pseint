@@ -1,0 +1,32 @@
+Algoritmo bases_adyacentes
+	// Variables que almacena los datos de entrada
+	Definir adn1,adn2 Como Caracter
+	// Variable que almacena el resultado
+	Definir bases Como Caracter
+	// Recibir los datos de entrada
+	Escribir 'Ingresar la primera secuencia de adn:'
+	Leer adn1
+	Escribir 'Ingresar la segunda secuencia de adn:'
+	Leer adn2
+	// Realizar la busqueda de las bases adyacentes
+	// entre las secuencias de adn por medio de dos 
+	// ciclos FOR
+	Para i<-Longitud(adn1) Hasta 0 Con Paso -1 Hacer
+		Para j<-0 Hasta i Hacer
+			// almacenar la subcadena de texto de adn1 
+			// por el rango de j y i
+			subadn1 <- Subcadena(adn1,j,i)
+			// Verificamos dos condiciones:
+			// 1. que la subcadena se encuentra en adn2
+			// 2. que la longitud de la ultima coincidencia encontrada
+			// sea menor a la longitud de la nueva coincidencia encontrada
+			con1 <- adn2=subadn1
+			con2 <- Longitud(bases)<Longitud(subadn1)
+			Si con1 Y con2 Entonces
+				// Si se cumple la condicion la subcadena se almacena en bases
+				bases <- subadn1
+			FinSi
+		FinPara
+	FinPara
+	Escribir 'El conjuento de bases adyacentes es:'+bases
+FinAlgoritmo
